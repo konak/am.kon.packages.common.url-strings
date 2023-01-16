@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <RootNamespace>am.kon.packages.common.url_strings</RootNamespace>
+    <Nullable>disable</Nullable>
+    <ReleaseVersion>1.0.0.0</ReleaseVersion>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>am.kon.packages.common.url-strings</PackageId>
+    <PackageVersion>1.0.0.0</PackageVersion>
+    <Authors>Konakov Sergey</Authors>
+    <Description>Package containing extensions, used for URL strings processing</Description>
+    <RepositoryUrl>https://github.com/konak/am.kon.packages.common.url-strings</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>konak packages url strings</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="System.Text.Encodings.Web" />
+    <None Remove="Microsoft.AspNetCore.WebUtilities" />
+    <None Remove="am.kon.packages.common.strings" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Text.Encodings.Web" Version="7.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.WebUtilities" Version="2.2.0" />
+    <PackageReference Include="am.kon.packages.common.strings" Version="1.0.0" />
+  </ItemGroup>
+</Project>
